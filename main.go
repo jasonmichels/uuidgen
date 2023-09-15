@@ -12,10 +12,10 @@ func main() {
 		fmt.Printf("Error generating UUID: %v\n", err)
 		return
 	}
-	fmt.Println(uuid)
+	fmt.Printf("UUIDV4: %s \n", uuid)
 
 	unix := UnixTime()
-	fmt.Println(unix)
+	fmt.Printf("Unixtimestamp: %v \n", unix)
 }
 
 func UnixTime() int64 {
