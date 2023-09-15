@@ -3,6 +3,7 @@ package main
 import (
 	"crypto/rand"
 	"fmt"
+	"time"
 )
 
 func main() {
@@ -12,6 +13,13 @@ func main() {
 		return
 	}
 	fmt.Println(uuid)
+
+	unix := UnixTime()
+	fmt.Println(unix)
+}
+
+func UnixTime() int64 {
+	return time.Now().Unix()
 }
 
 func NewUUIDv4() (string, error) {
@@ -33,4 +41,3 @@ func NewUUIDv4() (string, error) {
 		bytes[8], bytes[9],
 		bytes[10], bytes[11], bytes[12], bytes[13], bytes[14], bytes[15]), nil
 }
-
